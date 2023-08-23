@@ -1,0 +1,33 @@
+name: openpgp-libecc
+
+# Run this workflow every time a new commit pushed to your repository
+on: push
+
+jobs:
+  compilation_tests:
+    runs-on: ubuntu-22.04
+    strategy:
+      #max-parallel: 10
+      matrix:
+        cc: [gcc, clang, g++, clang++]
+        optflags: ["-O3", "-O2", "-O1"]
+    steps:
+      # Checkout repository
+      - name: checkout repository
+        uses: actions/checkout@v2
+      # Run actions
+      # libecc compilation tests
+      - name: OpenPGP libecc tests
+        env:
+          CC: ${{ matrix.cc }}
+          OPTFLAGS: ${{ matrix.optflags }}
+        shell: bash
+        run: |
+          # Compilation
+          #
+          make clean && make install_libecc;
+          EXTRA_OPENPGP_CFLAGS=$OPTFLAGS make;
+          # Runtime test
+          #
+          ./build/openpgp_test
+        continue-on-error: false
