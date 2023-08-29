@@ -24,7 +24,7 @@ all:
 	@cd libecc && VERBOSE=1 CRYPTOFUZZ=1 USE_SANITIZERS=$(USE_SANITIZERS) EXTRA_CFLAGS=$(EXTRA_OPENPGP_CFLAGS) $(MAKE) && cd -
 	@echo "[+] Compiling openpgp-libecc"
 	@mkdir -p build
-	$(CC) $(OPENPGP_CFLAGS) $(EXTERNAL_DEPS) src/openpgp_layer.c src/test/openpgp_layer_test.c src/test_main.c -I./libecc/src/ libecc/build/libsign.a $(OPENPGP_LDFLAGS) -o build/openpgp_test
+	$(CC) $(OPENPGP_CFLAGS) $(EXTERNAL_DEPS) src/openpgp_layer.c src/test/openpgp_layer_test.c src/test_main.c -I./libecc/include libecc/build/libsign.a $(OPENPGP_LDFLAGS) -o build/openpgp_test
 
 clean:
 	@echo "[+] Cleaning libecc"

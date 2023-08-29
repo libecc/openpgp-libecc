@@ -13,8 +13,8 @@
 #ifndef __OPENPGP_LAYER_TYPES_H__
 #define __OPENPGP_LAYER_TYPES_H__
 
-#include "lib_ecc_config.h"
-#include "lib_ecc_types.h"
+#include <libecc/lib_ecc_config.h>
+#include <libecc/lib_ecc_types.h>
 
 /**
  * Good understanding of those types is necessary for successful use of the library. 

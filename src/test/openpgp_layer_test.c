@@ -1,6 +1,6 @@
 #include "../openpgp_layer.h"
 #include "openpgp_layer_test.h"
-#include "utils/utils.h"
+#include <libecc/utils/utils.h>
 
 
 int openpgp_libecc_test_ecdh(const ecdh_test_value* vector) {

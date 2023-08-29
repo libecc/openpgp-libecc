@@ -1,8 +1,8 @@
 #include "openpgp_layer.h"
 #include "test/openpgp_layer_test.h"
 #include "test/openpgp_layer_test_vectors.h"
-#include "utils/utils.h"
-#include "external_deps/print.h"
+#include <libecc/utils/utils.h>
+#include <libecc/external_deps/print.h>
 
 int main(int argc, char* argv[]) {
 	int ret;

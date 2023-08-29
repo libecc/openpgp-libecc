@@ -13,8 +13,8 @@
 #ifndef __OPENPGP_LAYER_H__
 #define __OPENPGP_LAYER_H__
 
-#include "lib_ecc_config.h"
-#include "lib_ecc_types.h"
+#include <libecc/lib_ecc_config.h>
+#include <libecc/lib_ecc_types.h>
 
 #ifdef WITH_OPENPGP_LAYER
 #include "openpgp_layer_constants.h"

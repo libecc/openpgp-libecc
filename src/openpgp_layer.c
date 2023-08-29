@@ -1,14 +1,14 @@
 #include "openpgp_layer.h"
-#include "sig/eddsa.h"
-#include "sig/ec_key.h"
-#include "sig/sig_algs.h"
-#include "sig/sig_algs_internal.h"
-#include "curves/curves_list.h"
-#include "curves/curves.h"
-#include "sig/ecsdsa_common.h"
-#include "sig/fuzzing_ecdsa.h"
-#include "ecdh/ecccdh.h"
-#include "ecdh/x25519_448.h"
+#include <libecc/sig/eddsa.h>
+#include <libecc/sig/ec_key.h>
+#include <libecc/sig/sig_algs.h>
+#include <libecc/sig/sig_algs_internal.h>
+#include <libecc/curves/curves_list.h>
+#include <libecc/curves/curves.h>
+#include <libecc/sig/ecsdsa_common.h>
+#include <libecc/sig/fuzzing_ecdsa.h>
+#include <libecc/ecdh/ecccdh.h>
+#include <libecc/ecdh/x25519_448.h>
 
 #define EXTG(cond,val,lbl) do { if (cond) { ret = val; goto lbl ; } } while (0)
 
